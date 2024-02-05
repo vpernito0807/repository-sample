@@ -64,6 +64,31 @@
       <hashTree>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
         <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
@@ -111,9 +136,9 @@
           <stringProp name="1739087931">http?://self-repair\.mozilla\.org.*</stringProp>
           <stringProp name="1206954446">tiles.*\.mozilla\.com.*</stringProp>
           <stringProp name="-1424663473">.*detectportal\.firefox\.com.*</stringProp>
-          <stringProp name="1779943373">us\.update\.toolbar\.yahoo\.com.*</stringProp>
           <stringProp name="-190610036">.*\.google\.com.*/safebrowsing/.*</stringProp>
           <stringProp name="-1899150273">api\.bing\.com.*</stringProp>
+          <stringProp name="1779943373">us\.update\.toolbar\.yahoo\.com.*</stringProp>
           <stringProp name="-958112859">toolbar\.google\.com.*</stringProp>
           <stringProp name="-192420923">.*yimg\.com.*</stringProp>
           <stringProp name="-576820688">toolbar\.msn\.com.*</stringProp>
@@ -125,8 +150,8 @@
           <stringProp name="-1314416226">sqm\.microsoft\.com.*</stringProp>
           <stringProp name="587935979">g\.msn.*</stringProp>
           <stringProp name="1629558731">clients.*\.google.*</stringProp>
-          <stringProp name="11072252">.*toolbar\.yahoo\.com.*</stringProp>
           <stringProp name="1726898318">geo\.yahoo\.com.*</stringProp>
+          <stringProp name="11072252">.*toolbar\.yahoo\.com.*</stringProp>
         </collectionProp>
         <collectionProp name="ProxyControlGui.include_list"/>
         <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
